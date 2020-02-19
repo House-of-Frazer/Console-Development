@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody RB;
     bool PlayerGrounded;
 
+    public int moveSpeed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         //Controles for movement using WASD when the player presses and holds the key
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate((transform.forward * Time.deltaTime), Space.World);
+            transform.Translate((transform.forward * moveSpeed * Time.deltaTime), Space.World);
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -37,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate((-transform.forward * Time.deltaTime), Space.World);
+            transform.Translate((-transform.forward * moveSpeed * Time.deltaTime), Space.World);
         }
 
         if (Input.GetKey(KeyCode.D))
