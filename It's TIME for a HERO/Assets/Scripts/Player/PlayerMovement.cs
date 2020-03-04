@@ -11,10 +11,16 @@ public class PlayerMovement : MonoBehaviour
     public int moveSpeed;
 
 
+    //test mesh swap
+    public GameObject levelPast;
+    public GameObject levelPresent;
+    bool inPast = false;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        levelPast.SetActive(false);
+        levelPresent.SetActive(true);
     }
 
     // Update is called once per frame
@@ -24,6 +30,23 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && PlayerGrounded)
         {
             StartCoroutine(Jumping());
+        }
+
+        //test mesh swap
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (inPast == false)
+            {
+                levelPast.SetActive(true);
+                levelPresent.SetActive(false);
+                inPast = true;
+            }
+            else
+            {
+                levelPast.SetActive(false);
+                levelPresent.SetActive(true);
+                inPast = false;
+            }
         }
 
         //Controles for movement using WASD when the player presses and holds the key
