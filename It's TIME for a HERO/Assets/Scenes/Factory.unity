@@ -879,6 +879,7 @@ GameObject:
   - component: {fileID: 509056788}
   - component: {fileID: 509056787}
   - component: {fileID: 509056792}
+  - component: {fileID: 509056793}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Player
@@ -899,6 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 509056792}
+  PlayerGrounded: 0
   moveSpeed: 10
   levelPast: {fileID: 1767991306}
   levelPresent: {fileID: 1164505572}
@@ -992,6 +994,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &509056793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509056786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ed0223e4b582648a28b6bb314689cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &513440263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6860961830843091074, guid: 5974cb9291f733c49956b1ca0c7aac48,
