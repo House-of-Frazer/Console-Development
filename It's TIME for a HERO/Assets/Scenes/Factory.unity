@@ -1035,6 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 509056792}
+  PlayerGrounded: 0
   moveSpeed: 10
   levelPast: {fileID: 1767991306}
   levelPresent: {fileID: 1164505572}
@@ -1147,6 +1148,9 @@ MonoBehaviour:
   fadingTime: 4
   cameraFadeImage: {fileID: 1935573135}
   fadeTimer: 3
+  m_Script: {fileID: 11500000, guid: 33ed0223e4b582648a28b6bb314689cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &513440263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6860961830843091074, guid: 5974cb9291f733c49956b1ca0c7aac48,

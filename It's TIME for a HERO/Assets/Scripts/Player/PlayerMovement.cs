@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody RB;
-    bool PlayerGrounded;
+    public bool PlayerGrounded;
 
     public int moveSpeed;
 
@@ -31,8 +31,7 @@ public class PlayerMovement : MonoBehaviour
         levelPresent.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Forward() //Controls for movement using W when the player presses and holds the key
     {
         //player can only act if they are not time travelling
         if (timeTravel == false)
@@ -124,10 +123,48 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
+        transform.Translate((transform.forward * moveSpeed * Time.deltaTime), Space.World);
+    }
+    public void Left() //Controls for movement using A when the player presses and holds the key
+    {
+        transform.Translate(Vector3.left * Time.deltaTime, Camera.main.transform);
+    }
+    public void Right() //Controls for movement using S when the player presses and holds the key
+    {
+        transform.Translate(Vector3.right * Time.deltaTime, Camera.main.transform);
+    }
+    public void Backward() //Controls for movement using D when the player presses and holds the key
+    {
+        transform.Translate((-transform.forward * Time.deltaTime * Time.deltaTime), Space.World);
+    }
+
+    public void RotateLeft()  //Controls for movement of the players rotation using Q
+    {
+        transform.Rotate(-Vector3.up * 2);
+    }
+
+    public void RotateRight() //Controls for movement of the players rotation using E
+    {
+        transform.Rotate(Vector3.up * 2);   
+    }
+
+    public void TimeTravel() //test mesh swap
+    {
+        if (inPast == false)
+        {
+            levelPast.SetActive(true);
+            levelPresent.SetActive(false);
+            inPast = true;
+        }
+        else
+        {
+            levelPast.SetActive(false);
+            levelPresent.SetActive(true);
+            inPast = false;
         }
     }
 
-    IEnumerator Jumping()
+    public IEnumerator Jumping()
     {
         RB.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
         PlayerGrounded = false;
