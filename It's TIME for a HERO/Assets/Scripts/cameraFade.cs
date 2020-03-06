@@ -9,6 +9,10 @@ public class cameraFade : MonoBehaviour
     public bool currentlyFading = false;
     public float fadingTime = 4.0f;
 
+    //variable to control the total fade time, to prevent player activating time travel before fade in and out has completed
+    bool totalFadeComplete = true;
+    float totalFadeTime = 7.0f;
+
 
     public Image cameraFadeImage;
     public float fadeTimer = 3.0f;
@@ -29,12 +33,13 @@ public class cameraFade : MonoBehaviour
     void Update()
     {
         //if the fading is currently not happening, the player can press T to start the fade. (conicides with Player Movement press T event)
-        if (currentlyFading == false)
+        if (currentlyFading == false && totalFadeTime >= 7)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.T)) 
             {
                 timeSwitch();
                 currentlyFading = true;
+                totalFadeComplete = false;
             }
         }
 
@@ -42,16 +47,27 @@ public class cameraFade : MonoBehaviour
         {
             if (fadingTime > 0)
             {
-                fadingTime -= Time.deltaTime * 1f;           
+                fadingTime -= Time.deltaTime * 1f;
             }
             else
             {
                 StartCoroutine(fadeToColor(fadeTransparent, fadeTimer));
                 currentlyFading = false;
-                fadingTime = 4.0f;           
+                fadingTime = 4.0f;
             }
         }
 
+        if (totalFadeComplete == false)
+        {
+            totalFadeTime -= Time.deltaTime * 1f;
+        }
+
+        //reset total fade Time
+        if (totalFadeTime <=0)
+        {
+            totalFadeComplete = true;
+            totalFadeTime = 7.0f;
+        }
     }
 
     IEnumerator fadeToColor(Vector4 colorToFadeTo, float duration)

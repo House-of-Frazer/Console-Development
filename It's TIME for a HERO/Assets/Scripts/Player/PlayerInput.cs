@@ -12,48 +12,61 @@ public class PlayerInput : MonoBehaviour
     }
     void BasicMovement() //Controls the inputs for the player's basic movment
     {
-        if (Input.GetKey(KeyCode.W))
+        //player can only act if they are not time travelling
+        if (PlayerMovement.timeTravel == false)
         {
-            movement.Forward();
-        }
+            if (Input.GetKey(KeyCode.W))
+            {
+                movement.Forward();
+            }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            movement.Left();
-        }
+            if (Input.GetKey(KeyCode.A))
+            {
+                movement.Left();
+            }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            movement.Right();
-        }
+            if (Input.GetKey(KeyCode.S))
+            {
+                movement.Right();
+            }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            movement.Backward();
+            if (Input.GetKey(KeyCode.D))
+            {
+                movement.Backward();
+            }
         }
     }
 
     void ExtraMovement() //Controls the inputs for the player's advanced movement
     {
-        if (Input.GetKey(KeyCode.Q))
+        //player can only act if they are not time travelling
+        if (PlayerMovement.timeTravel == false)
         {
-            movement.RotateLeft();
-        }
-        if (Input.GetKey(KeyCode.E))
-        {
-            movement.RotateRight();
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && movement.PlayerGrounded)
-        {
-            StartCoroutine(movement.Jumping());
+            if (Input.GetKey(KeyCode.Q))
+            {
+                movement.RotateLeft();
+            }
+            if (Input.GetKey(KeyCode.E))
+            {
+                movement.RotateRight();
+            }
+            if (Input.GetKeyDown(KeyCode.Space) && movement.PlayerGrounded)
+            {
+                StartCoroutine(movement.Jumping());
+            }
         }
     }
 
     void TimeTravel() //Controls the inputs for the player's time travel mechanic
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        //player can only act if they are not time travelling
+        if (PlayerMovement.timeTravel == false)
         {
-            movement.TimeTravel();
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                PlayerMovement.timeTravel = true;
+                //movement.TimeTravel();
+            }
         }
     }
     

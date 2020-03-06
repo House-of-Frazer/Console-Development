@@ -10,14 +10,13 @@ public class PlayerMovement : MonoBehaviour
 
     public int moveSpeed;
 
-
     //test mesh swap
     public GameObject levelPast;
     public GameObject levelPresent;
     bool inPast = false;
 
     //bool to check whether player is time travelling
-    bool timeTravel = false;
+    public static bool timeTravel = false;
     public float travelTimer = 7.0f;
 
     //bool to handle level switching between past and present
@@ -31,57 +30,8 @@ public class PlayerMovement : MonoBehaviour
         levelPresent.SetActive(true);
     }
 
-    public void Forward() //Controls for movement using W when the player presses and holds the key
+    void Update()
     {
-        //player can only act if they are not time travelling
-        if (timeTravel == false)
-        {
-
-            //requires the player to press space to jump
-            if (Input.GetKeyDown(KeyCode.Space) && PlayerGrounded)
-            {
-                StartCoroutine(Jumping());
-            }
-
-            //test mesh swap
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                timeTravel = true; //player is now time travelling             
-            }
-
-            //Controles for movement using WASD when the player presses and holds the key
-            if (Input.GetKey(KeyCode.W))
-            {
-                transform.Translate((transform.forward * moveSpeed * Time.deltaTime), Space.World);
-            }
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                transform.Translate(Vector3.left * Time.deltaTime, Camera.main.transform);
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                transform.Translate((-transform.forward * moveSpeed * Time.deltaTime), Space.World);
-            }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                transform.Translate(Vector3.right * Time.deltaTime, Camera.main.transform);
-            }
-
-            //Controls for movement of the players rotation using Q and E keys to look around and behind themselves
-            if (Input.GetKey(KeyCode.Q))
-            {
-                transform.Rotate(Vector3.up * 2);
-            }
-
-            if (Input.GetKey(KeyCode.E))
-            {
-                transform.Rotate(-Vector3.up * 2);
-            }
-        }
-
         //timer to handle freezing player movement until time travel is complete
         if (timeTravel == true)
         {
@@ -123,8 +73,14 @@ public class PlayerMovement : MonoBehaviour
                     }
                 }
             }
-        transform.Translate((transform.forward * moveSpeed * Time.deltaTime), Space.World);
+        }
     }
+
+    public void Forward() //Controls for movement using W when the player presses and holds the key
+    {
+        transform.Translate((transform.forward * moveSpeed * Time.deltaTime), Space.World);        
+    }
+
     public void Left() //Controls for movement using A when the player presses and holds the key
     {
         transform.Translate(Vector3.left * Time.deltaTime, Camera.main.transform);
@@ -148,21 +104,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(Vector3.up * 2);   
     }
 
-    public void TimeTravel() //test mesh swap
-    {
-        if (inPast == false)
-        {
-            levelPast.SetActive(true);
-            levelPresent.SetActive(false);
-            inPast = true;
-        }
-        else
-        {
-            levelPast.SetActive(false);
-            levelPresent.SetActive(true);
-            inPast = false;
-        }
-    }
 
     public IEnumerator Jumping()
     {
