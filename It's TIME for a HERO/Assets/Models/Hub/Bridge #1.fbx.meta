@@ -3,17 +3,7 @@ guid: 1af77d7405dc5c54e9a73ccfbb45a24e
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__Rope
-    second: {fileID: 2100000, guid: 3e341f79f61c23742b58ebb4ded55ed6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__WoodBridge
-    second: {fileID: 2100000, guid: c70e1446be1c5e141b3755034ce0402c, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
