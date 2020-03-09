@@ -30,7 +30,7 @@ public class PlayerMovementN : MonoBehaviour
         //Controles for movement using WASD when the player presses and holds the key
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate((transform.forward * movement), Space.World);
+            transform.Translate(Vector3.forward * movement, Camera.main.transform);
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -40,7 +40,7 @@ public class PlayerMovementN : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate((-transform.forward * movement), Space.World);
+            transform.Translate(-Vector3.forward * movement, Camera.main.transform);
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -60,15 +60,15 @@ public class PlayerMovementN : MonoBehaviour
         }
 
 
-        moveDirection = (transform.forward * Input.GetAxis("MoveVertical") + transform.right * Input.GetAxis("MoveHorizontal"));
-        //moveDirection = (transform.right * Input.GetAxis("MoveHorizontal"));
+        //moveDirection = (transform.forward * Input.GetAxis("MoveVertical") + transform.right * Input.GetAxis("MoveHorizontal"));
+        //**moveDirection = (transform.right * Input.GetAxis("MoveHorizontal"));
 
-        transform.position = transform.position + moveDirection * Time.deltaTime * 5;
+        //transform.position = transform.position + moveDirection * Time.deltaTime * 5;
 
-        //heading += Input.GetAxis("MoveHorizontal") * Time.deltaTime;
-        //pivot.rotation = Quaternion.Euler(0, heading, 0);
+        //**heading += Input.GetAxis("MoveHorizontal") * Time.deltaTime;
+        //**pivot.rotation = Quaternion.Euler(0, heading, 0);
 
-        //moveDirection = (transform.forward * Input.GetAxis("MoveHorizontal") * movement);
+        //**moveDirection = (transform.forward * Input.GetAxis("MoveHorizontal") * movement);
 
     }
 
