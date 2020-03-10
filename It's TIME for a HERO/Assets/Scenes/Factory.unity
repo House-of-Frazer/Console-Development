@@ -270,7 +270,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 10
+=======
+  m_RootOrder: 9
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141390481 stripped
 GameObject:
@@ -707,7 +711,11 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 5974cb9291f733c49956b1ca0c7aac48,
         type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 8
+=======
+      value: 7
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5974cb9291f733c49956b1ca0c7aac48,
         type: 3}
@@ -1112,7 +1120,10 @@ Transform:
   m_LocalPosition: {x: 2.6, y: 12.2, z: 3.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< HEAD
   - {fileID: 1307987830}
+=======
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
   - {fileID: 1089147634}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2056,7 +2067,11 @@ Transform:
   m_LocalScale: {x: 0.70971, y: 0.70971, z: 0.70971}
   m_Children: []
   m_Father: {fileID: 509056791}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 0
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095204652 stripped
 GameObject:
@@ -2089,6 +2104,7 @@ MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+<<<<<<< HEAD
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126324401}
   m_Material: {fileID: 0}
@@ -2104,6 +2120,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 373218501}
   m_PrefabAsset: {fileID: 0}
+=======
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126324401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -7074007238773475336, guid: 5974cb9291f733c49956b1ca0c7aac48, type: 3}
+--- !u!1 &1164505572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5974cb9291f733c49956b1ca0c7aac48,
+    type: 3}
+  m_PrefabInstance: {fileID: 373218501}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
 --- !u!1 &1189671803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4837942359284784599, guid: 5974cb9291f733c49956b1ca0c7aac48,
@@ -2280,6 +2313,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307987827}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.17329428, y: -0, z: -0, w: 0.9848701}
   m_LocalPosition: {x: -0, y: 3.55, z: -7.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -2287,6 +2321,31 @@ Transform:
   m_Father: {fileID: 509056791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 19.959002, y: 0, z: 0}
+=======
+  m_LocalRotation: {x: 0.12253757, y: -0.69640833, z: 0.12253757, w: 0.69640833}
+  m_LocalPosition: {x: 9.610001, y: 15.75, z: 3.700001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 19.959002, y: 0, z: 0}
+--- !u!114 &1307987831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307987827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cbe8ead33eaa449a6be4e3d05b4ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTransform: {fileID: 509056791}
+  Smoothness: 0.5
+  LookAtPlayer: 0
+  RotationSpeed: 5
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
 --- !u!1 &1308439007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8718137415635814233, guid: 5974cb9291f733c49956b1ca0c7aac48,
@@ -2601,6 +2660,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 972614196974622048, guid: 5974cb9291f733c49956b1ca0c7aac48, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &1395194813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2670,6 +2730,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9af3d12e2d912a45807a379d9fc3d81, type: 3}
+=======
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
 --- !u!1 &1406165568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3990801525199377572, guid: 5974cb9291f733c49956b1ca0c7aac48,
@@ -3380,7 +3442,11 @@ Transform:
   - {fileID: 1455230490}
   - {fileID: 740951925}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784875397 stripped
 GameObject:
@@ -3722,6 +3788,7 @@ CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
+<<<<<<< HEAD
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935573133}
   m_CullTransparentMesh: 0
@@ -3731,6 +3798,17 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 373218501}
   m_PrefabAsset: {fileID: 0}
+=======
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935573133}
+  m_CullTransparentMesh: 0
+--- !u!1 &1942650542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6671466721049915657, guid: 5974cb9291f733c49956b1ca0c7aac48,
+    type: 3}
+  m_PrefabInstance: {fileID: 373218501}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> parent of 29ee79c... Added factory basic puzzle
 --- !u!64 &1942650544
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4041,7 +4119,7 @@ PrefabInstance:
     - target: {fileID: 1507479769422482480, guid: e9af3d12e2d912a45807a379d9fc3d81,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1507479769422482480, guid: e9af3d12e2d912a45807a379d9fc3d81,
         type: 3}
