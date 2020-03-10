@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 1f902f1571b96b54cb597b20597fc944
+  - enabled: 1
+    path: Assets/Scenes/IceMountain.unity
+    guid: 1938cbad22841dd4ea33414e9f6c5644
+  - enabled: 1
+    path: Assets/Scenes/Factory.unity
+    guid: fbb58dbee7f0fcb4f931ce3ce0813569
   m_configObjects: {}

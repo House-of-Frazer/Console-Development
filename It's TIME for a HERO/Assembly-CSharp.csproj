@@ -75,7 +75,9 @@
     <Compile Include="Assets\Scripts\Factory\keyCards.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Player\TimeTravel.cs" />
+    <Compile Include="Assets\Scripts\portal.cs" />
     <Compile Include="Assets\Scripts\resetPlayer.cs" />
+    <Compile Include="Assets\Scripts\tempPlayerDeath.cs" />
     <Compile Include="Assets\Scripts\UI\CollectableUI.cs" />
     <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
     <Reference Include="Unity.Timeline.Editor">
