@@ -66,14 +66,15 @@
     <Compile Include="Assets\Scripts\AiSwarm.cs" />
     <Compile Include="Assets\Scripts\camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\cameraFade.cs" />
-    <Compile Include="Assets\Scripts\changeLevel.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\Billboard.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\HealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\PlayerMovementN.cs" />
     <Compile Include="Assets\Scripts\Factory\conveyor.cs" />
+    <Compile Include="Assets\Scripts\Factory\Doors.cs" />
+    <Compile Include="Assets\Scripts\Factory\keyCards.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\TimeTravel.cs" />
     <Compile Include="Assets\Scripts\resetPlayer.cs" />
     <Compile Include="Assets\Scripts\UI\CollectableUI.cs" />
     <Compile Include="Assets\Scripts\UI\HealthUI.cs" />

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class cameraFade : MonoBehaviour
 {
+    PlayerMovementN checkGrounded; //Reference for the PlayerMovement script;
+
     //variables to handle fade switching
     public bool currentlyFading = false;
     public float fadingTime = 4.0f;
@@ -23,6 +25,7 @@ public class cameraFade : MonoBehaviour
     void Start()
     {
         cameraFadeImage.color = fadeTransparent;
+        checkGrounded = GetComponent<PlayerMovementN>(); //Setup reference for the PlayerMovement script;
     }
 
     void timeSwitch()
@@ -32,41 +35,44 @@ public class cameraFade : MonoBehaviour
 
     void Update()
     {
-        //if the fading is currently not happening, the player can press T to start the fade. (conicides with Player Movement press T event)
-        if (currentlyFading == false && totalFadeTime >= 7)
+        if (checkGrounded.PlayerGrounded == true)
         {
-            if (Input.GetKeyDown(KeyCode.T)) 
+            //if the fading is currently not happening, the player can press T to start the fade. (conicides with Player Movement press T event)
+            if (currentlyFading == false && totalFadeTime >= 7)
             {
-                timeSwitch();
-                currentlyFading = true;
-                totalFadeComplete = false;
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    timeSwitch();
+                    currentlyFading = true;
+                    totalFadeComplete = false;
+                }
             }
-        }
 
-        if (currentlyFading == true)
-        {
-            if (fadingTime > 0)
+            if (currentlyFading == true)
             {
-                fadingTime -= Time.deltaTime * 1f;
+                if (fadingTime > 0)
+                {
+                    fadingTime -= Time.deltaTime * 1f;
+                }
+                else
+                {
+                    StartCoroutine(fadeToColor(fadeTransparent, fadeTimer));
+                    currentlyFading = false;
+                    fadingTime = 4.0f;
+                }
             }
-            else
+
+            if (totalFadeComplete == false)
             {
-                StartCoroutine(fadeToColor(fadeTransparent, fadeTimer));
-                currentlyFading = false;
-                fadingTime = 4.0f;
+                totalFadeTime -= Time.deltaTime * 1f;
             }
-        }
 
-        if (totalFadeComplete == false)
-        {
-            totalFadeTime -= Time.deltaTime * 1f;
-        }
-
-        //reset total fade Time
-        if (totalFadeTime <=0)
-        {
-            totalFadeComplete = true;
-            totalFadeTime = 7.0f;
+            //reset total fade Time
+            if (totalFadeTime <= 0)
+            {
+                totalFadeComplete = true;
+                totalFadeTime = 7.0f;
+            }
         }
     }
 

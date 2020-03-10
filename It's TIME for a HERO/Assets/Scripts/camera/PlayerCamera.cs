@@ -26,22 +26,25 @@ public class PlayerCamera : MonoBehaviour
     void LateUpdate()
     {
 
-        if (RotatePlayer)
+        if (TimeTravel.timeTravel == false)
         {
-            Quaternion camTurnAngle =
-                    Quaternion.AngleAxis(Input.GetAxis("Horizontal") * RotationSpeed, Vector3.up);
+            if (RotatePlayer)
+            {
+                Quaternion camTurnAngle =
+                        Quaternion.AngleAxis(Input.GetAxis("Horizontal") * RotationSpeed, Vector3.up);
 
-            cameraOffset = camTurnAngle * cameraOffset;            
-        }
+                cameraOffset = camTurnAngle * cameraOffset;
+            }
 
-        Vector3 newPos = PlayerTransform.position + cameraOffset;
+            Vector3 newPos = PlayerTransform.position + cameraOffset;
 
-        transform.position = Vector3.Slerp(transform.position, newPos, Smoothness);
+            transform.position = Vector3.Slerp(transform.position, newPos, Smoothness);
 
 
-        if (LookAtPlayer || RotatePlayer)
-        {
-            transform.LookAt(PlayerTransform);
+            if (LookAtPlayer || RotatePlayer)
+            {
+                transform.LookAt(PlayerTransform);
+            }
         }
     }
 }
