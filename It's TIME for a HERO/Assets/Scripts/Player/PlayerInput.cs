@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    PlayerMovement movement; //Reference for the PlayerMovement script;
+    PlayerMovementN movement; //Reference for the PlayerMovement script;
+    TimeTravel travel; // Referecnce to the TimeTrvael script;
 
     private void Awake()
     {
-        movement = GetComponent<PlayerMovement>(); //Setup reference for the PlayerMovement script;
+        movement = GetComponent<PlayerMovementN>(); //Setup reference for the PlayerMovement script;
+        travel = GetComponent<TimeTravel>(); //Setup reference for the PlayerMovement script;
     }
     void BasicMovement() //Controls the inputs for the player's basic movment
     {
         //player can only act if they are not time travelling
-        if (PlayerMovement.timeTravel == false)
+        if (TimeTravel.timeTravel == false)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -27,12 +29,12 @@ public class PlayerInput : MonoBehaviour
 
             if (Input.GetKey(KeyCode.S))
             {
-                movement.Right();
+                movement.Backward();
             }
 
             if (Input.GetKey(KeyCode.D))
             {
-                movement.Backward();
+                movement.Right();
             }
         }
     }
@@ -40,7 +42,7 @@ public class PlayerInput : MonoBehaviour
     void ExtraMovement() //Controls the inputs for the player's advanced movement
     {
         //player can only act if they are not time travelling
-        if (PlayerMovement.timeTravel == false)
+        if (TimeTravel.timeTravel == false)
         {
             if (Input.GetKey(KeyCode.Q))
             {
@@ -57,14 +59,14 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    void TimeTravel() //Controls the inputs for the player's time travel mechanic
+    void TimeTravelling() //Controls the inputs for the player's time travel mechanic
     {
         //player can only act if they are not time travelling
-        if (PlayerMovement.timeTravel == false)
+        if (TimeTravel.timeTravel == false && movement.PlayerGrounded)
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
-                PlayerMovement.timeTravel = true;
+                TimeTravel.timeTravel = true;
                 //movement.TimeTravel();
             }
         }
@@ -81,6 +83,6 @@ public class PlayerInput : MonoBehaviour
     {
         BasicMovement();
         ExtraMovement();
-        TimeTravel();
+        TimeTravelling();
     }
 }
