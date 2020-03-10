@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\EnemyHealthBar\HealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\PlayerMovementN.cs" />
     <Compile Include="Assets\Scripts\Factory\conveyor.cs" />
+    <Compile Include="Assets\Scripts\Factory\Doors.cs" />
+    <Compile Include="Assets\Scripts\Factory\keyCards.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Player\TimeTravel.cs" />
     <Compile Include="Assets\Scripts\resetPlayer.cs" />
