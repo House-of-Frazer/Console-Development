@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Factory\conveyor.cs" />
      <Compile Include="Assets\Scripts\Factory\Doors.cs" />
      <Compile Include="Assets\Scripts\Factory\keyCards.cs" />
+     <Compile Include="Assets\Scripts\LevelIceMountain\ObjectEnabler.cs" />
      <Compile Include="Assets\Scripts\LevelWoodland\CameraSwitch.cs" />
      <Compile Include="Assets\Scripts\LevelWoodland\Grid.cs" />
      <Compile Include="Assets\Scripts\LevelWoodland\MakeMarker.cs" />
