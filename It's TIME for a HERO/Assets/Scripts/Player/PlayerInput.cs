@@ -6,13 +6,11 @@ public class PlayerInput : MonoBehaviour
 {
     PlayerMovementN movement; //Reference for the PlayerMovement script;
     TimeTravel travel; // Referecnce to the TimeTrvael script;
-    EscapeMenuUI menu; //Reference to EscapeMenuScript;
 
     private void Awake()
     {
         movement = GetComponent<PlayerMovementN>(); //Setup reference for the PlayerMovement script;
-        travel = GetComponent<TimeTravel>(); //Setup reference for the TimeTravel script;
-        menu = GetComponent<EscapeMenuUI>(); //Setup reference for the Menu script;
+        travel = GetComponent<TimeTravel>(); //Setup reference for the PlayerMovement script;
     }
     void BasicMovement() //Controls the inputs for the player's basic movment
     {
@@ -73,20 +71,6 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
-
-    void EscapeMenu()
-    {
-        if (Input.GetKey(KeyCode.Escape) && menu.IsHidden == true)
-        {
-            menu.IsHidden = false;
-            menu.HideMenu();
-        }
-        if (Input.GetKey(KeyCode.Escape) && menu.IsHidden == false)
-        {
-            menu.IsHidden = true;
-            menu.ShowMenu();
-        }
-    }
     
     // Start is called before the first frame update
     void Start()
@@ -100,6 +84,5 @@ public class PlayerInput : MonoBehaviour
         BasicMovement();
         ExtraMovement();
         TimeTravelling();
-        EscapeMenu();
     }
 }
