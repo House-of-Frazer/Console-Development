@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\portal.cs" />
      <Compile Include="Assets\Scripts\resetPlayer.cs" />
      <Compile Include="Assets\Scripts\tempPlayerDeath.cs" />
+     <Compile Include="Assets\Scripts\tempShaderPingPong.cs" />
      <Compile Include="Assets\Scripts\UI\CollectableUI.cs" />
      <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
      <None Include="Assets\Shaders\testWireframe.shader" />
