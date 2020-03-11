@@ -79,6 +79,9 @@
      <Compile Include="Assets\Scripts\tempPlayerDeath.cs" />
      <Compile Include="Assets\Scripts\UI\CollectableUI.cs" />
      <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
+     <None Include="Assets\Shaders\testWireframe.shader" />
+     <None Include="Assets\Shaders\EnemyShader.shader" />
+     <None Include="Assets\Shaders\WaterOpaque.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/MINI SASHA/Documents/,Uni/Yr3Sm2/ConsoleGamesProgramming/Console-Development/It&apos;s TIME for a HERO/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
