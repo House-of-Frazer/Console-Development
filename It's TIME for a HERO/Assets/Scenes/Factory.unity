@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB: {fileID: 509056792}
   PlayerGrounded: 0
-  movement: 0.1
+  movement: 0.3
 --- !u!114 &509056796
 MonoBehaviour:
   m_ObjectHideFlags: 0
