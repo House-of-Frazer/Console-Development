@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RB: {fileID: 971481865}
   PlayerGrounded: 0
-  movement: 0.3
+  movement: 0.1
 --- !u!114 &971481873
 MonoBehaviour:
   m_ObjectHideFlags: 0
