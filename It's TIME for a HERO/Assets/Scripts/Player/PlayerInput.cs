@@ -44,15 +44,15 @@ public class PlayerInput : MonoBehaviour
         //player can only act if they are not time travelling
         if (TimeTravel.timeTravel == false)
         {
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetButton("LBumper"))
             {
                 movement.RotateLeft();
             }
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButton("RBumper"))
             {
                 movement.RotateRight();
             }
-            if (Input.GetKeyDown(KeyCode.Space) && movement.PlayerGrounded)
+            if (Input.GetButton("Jump") && movement.PlayerGrounded)
             {
                 StartCoroutine(movement.Jumping());
             }
@@ -64,7 +64,7 @@ public class PlayerInput : MonoBehaviour
         //player can only act if they are not time travelling
         if (TimeTravel.timeTravel == false && movement.PlayerGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetButton("TimeTravel"))
             {
                 TimeTravel.timeTravel = true;
                 //movement.TimeTravel();

@@ -40,7 +40,7 @@ public class cameraFade : MonoBehaviour
             //if the fading is currently not happening, the player can press T to start the fade. (conicides with Player Movement press T event)
             if (currentlyFading == false && totalFadeTime >= 7)
             {
-                if (Input.GetKeyDown(KeyCode.T))
+                if (Input.GetButton("TimeTravel"))
                 {
                     timeSwitch();
                     currentlyFading = true;

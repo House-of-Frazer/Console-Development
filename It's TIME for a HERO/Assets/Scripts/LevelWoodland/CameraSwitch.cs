@@ -19,7 +19,7 @@ public class CameraSwitch : MonoBehaviour
 
    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButton("FBOne"))
         {
             //if (mainCamActive == true)
             //{
@@ -35,7 +35,7 @@ public class CameraSwitch : MonoBehaviour
             }*/
        
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetButton("FBTwo"))
         {
             mainCamera.SetActive(true);
             topDownCamera.SetActive(false);
