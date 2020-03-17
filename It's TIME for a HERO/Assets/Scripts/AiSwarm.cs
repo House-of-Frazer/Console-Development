@@ -4,21 +4,14 @@ using UnityEngine;
 
 public class AiSwarm : MonoBehaviour {
 
-    //This script is for CheeseGobblers on the Moon!
+    //This script is for Swarm AI
 
     //The position of the player
     public GameObject player;
 
-    //Latch on stuff
-    //public Transform other; //Transform position of the player
     public float speed; //The Speed to control how fast the Cheese Gobbler Latches on to the player
-    float ActiveState; // 
-    bool latched; //Bool to determine if entity is currently latched onto the player
+    float ActiveState; //current state of the AI 
     bool attacking = false; //Bool to determine if entity is in attacking mode
-    float randX; //Float to randomize X latching on position
-    float randZ; //Float to randomize Z latching on position
-    float randY; //Float to aid in randomizing Y latching on position
-    float Yrand; //Float to hold random Y latching on position
 
     float damageTimer = 0.8f;
 
@@ -37,7 +30,6 @@ public class AiSwarm : MonoBehaviour {
     //Movement speed of the cube
     private float movementSpeed = 2f;
 
-
     //The starting point of the cube when the game is started
     //Holds the starting position values mentioned in the start method
     public Vector3 startingPos;
@@ -51,6 +43,9 @@ public class AiSwarm : MonoBehaviour {
 
     //Timer to be used within the idleMovement method for changing the switcher bool
     public float timer;
+
+    //Damage stuff
+    EnemyDamage damageControl;
 
 
     // Use this for initialization
@@ -68,15 +63,7 @@ public class AiSwarm : MonoBehaviour {
         //Set the switcher to false so the cube doesnt move straight away.
         switcher = false;
 
-        randX = Random.Range(-0.5f, 0.5f); //latch on random x
-        randZ = Random.Range(-0.4f, 0.4f); //latch on random z
-        randY = Random.Range(0, 2); //Choose which side of the player to grab onto
-
-        //set the Cheese Gobblers random Y to one of two choices (either side of the player)
-        if (randY == 0)
-            Yrand = 1.9f;
-        if (randY == 1)
-            Yrand = -1.9f;
+        damageControl = GetComponent<EnemyDamage>();
     }
 
     // Update is called once per frame
@@ -105,21 +92,23 @@ public class AiSwarm : MonoBehaviour {
                 idleState();
             }
         }
-
-        //if ActiveState is true, call the Carry Method
-        if (ActiveState == 1)
+        if (attacking  == true)
         {
-            Carry();
+            if (distanceFromPlayer < 10)
+            {
+                attacking = false;
+                runToState();
+            }
         }
 
         //Destroy the enemy
 
         //if Player attacks and instance is latched onto player, destroy instance
-        /*if (player is attacking == true)
+        if (damageControl.EnemycurrentHealth <= 0)
         {
-                //Destroy(gameObject);
+                Destroy(gameObject);
 
-        }*/
+        }
 
     }
 
@@ -179,40 +168,12 @@ public class AiSwarm : MonoBehaviour {
 
     }
 
-    //When Cheese Gobbler collides with the player, set latch on to true
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.transform.tag == "Player")
-        {
-            latched = true;
-        }
-    }
-
-    //Method for controlling the latch on state of the Cheese Gobbler AI
-    void Carry()
-    {
-        float step = speed * Time.deltaTime; //set speed to latch onto the player.
-
-        //if not latched on, try to latch on
-        if (latched == false)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step);
-        }
-
-        //if latched on, activate latching on controls
-        
-    }
-
     //Attacking state
     //The Cheese Gobbler will latch onto the player.
     void attackState()
     {
         Debug.Log("Attack"); //Debug
         ActiveState = 1;
-        if (ActiveState == 1)
-        {
-            Carry();
-        }
     }
 
     //RunningBack state
