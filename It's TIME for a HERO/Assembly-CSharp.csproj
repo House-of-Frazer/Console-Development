@@ -62,6 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Ai\AI.cs" />
+    <Compile Include="Assets\Scripts\Ai\IdleState.cs" />
+    <Compile Include="Assets\Scripts\Ai\MoveState.cs" />
+    <Compile Include="Assets\Scripts\Ai\RunBackState.cs" />
+    <Compile Include="Assets\Scripts\Ai\RunToState.cs" />
+    <Compile Include="Assets\Scripts\Ai\StateMachine.cs" />
     <Compile Include="Assets\Scripts\AiSwarm.cs" />
     <Compile Include="Assets\Scripts\camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\cameraFade.cs" />

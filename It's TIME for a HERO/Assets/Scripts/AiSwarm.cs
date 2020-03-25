@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StateControl;
 
 public class AiSwarm : MonoBehaviour {
 
@@ -107,7 +108,6 @@ public class AiSwarm : MonoBehaviour {
         if (damageControl.EnemycurrentHealth <= 0)
         {
                 Destroy(gameObject);
-
         }
 
     }
