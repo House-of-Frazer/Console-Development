@@ -18,10 +18,10 @@
 	{
 		Tags { "RenderType" = "Opaque" }
 		LOD 200
-		Cull Off //make material double-sided
+		Cull Off //Fast way to turn your material double-sided
 
 		CGPROGRAM
-		#pragma surface surf Standard fullforwardshadows addshadow 
+		#pragma surface surf Standard fullforwardshadows
 		#pragma target 3.0
 
 		sampler2D _MainTex;
