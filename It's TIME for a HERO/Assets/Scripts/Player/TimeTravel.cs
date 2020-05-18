@@ -11,7 +11,7 @@ public class TimeTravel : MonoBehaviour
     //test mesh swap
     public GameObject levelPast;
     public GameObject levelPresent;
-    bool inPast = false;
+    public bool inPast = false;
 
     //bool to check whether player is time travelling
     public static bool timeTravel = false;
@@ -20,6 +20,8 @@ public class TimeTravel : MonoBehaviour
     //bool to handle level switching between past and present
     public bool switchLevel = true;
     public float switchTimer = 3.5f;
+
+    BackgroundMusic backgroundMusic;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,7 @@ public class TimeTravel : MonoBehaviour
                         inPast = true;
                         switchLevel = false;
                         switchTimer = 3.5f;
+                        backgroundMusic.MyFunctionCalled = false;
                     }
                     else
                     {
@@ -68,6 +71,7 @@ public class TimeTravel : MonoBehaviour
                         inPast = false;
                         switchLevel = false;
                         switchTimer = 3.5f;
+                        backgroundMusic.MyFunctionCalled = false;
                     }
                 }
             }
@@ -81,5 +85,10 @@ public class TimeTravel : MonoBehaviour
         {
             PlayerGrounded = true;
         }
+    }
+
+    void Awake()
+    {
+        backgroundMusic = GetComponent<BackgroundMusic>();
     }
 }

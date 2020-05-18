@@ -83,6 +83,8 @@
     <Compile Include="Assets\Scripts\Player\TimeTravel.cs" />
     <Compile Include="Assets\Scripts\portal.cs" />
     <Compile Include="Assets\Scripts\resetPlayer.cs" />
+    <Compile Include="Assets\Scripts\Sound\BackgroundMusic.cs" />
+    <Compile Include="Assets\Scripts\Sound\PauseMusic.cs" />
     <Compile Include="Assets\Scripts\tempPlayerDeath.cs" />
     <Compile Include="Assets\Scripts\tempShaderPingPong.cs" />
     <Compile Include="Assets\Scripts\UI\CollectableUI.cs" />
