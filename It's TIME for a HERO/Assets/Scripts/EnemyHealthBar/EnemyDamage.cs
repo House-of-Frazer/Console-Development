@@ -12,11 +12,14 @@ public class EnemyDamage : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("Player"))
+        if (col.collider.CompareTag("Player") || (col.collider.CompareTag("Bullet")))
         {
             EnemyTakeDamage(10);
+            Destroy(col.gameObject);
         }
     }
+
+
 
     void EnemyTakeDamage(int damage)
     {

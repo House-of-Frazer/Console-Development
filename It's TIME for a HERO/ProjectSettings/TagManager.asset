@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - redDoor
   - redCard
+  - Bullet
   layers:
   - Default
   - TransparentFX
