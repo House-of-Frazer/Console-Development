@@ -11,7 +11,7 @@ public class TimeTravel : MonoBehaviour
     //test mesh swap
     public GameObject levelPast;
     public GameObject levelPresent;
-    bool inPast = false;
+    public bool inPast = false;
 
     //bool to check whether player is time travelling
     public static bool timeTravel = false;

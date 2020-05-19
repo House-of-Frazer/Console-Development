@@ -15,6 +15,11 @@ public class keyCards : MonoBehaviour
                 Doors.redKeyCard = true;
                 Destroy(gameObject);
             }
+            if (gameObject.tag == "blueCard")
+            {
+                Doors.blueKeyCard = true;
+                Destroy(gameObject);
+            }
         }
     }
 }

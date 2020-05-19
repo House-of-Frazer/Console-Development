@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - redDoor
   - redCard
+  - blueDoor
+  - blueCard
   layers:
   - Default
   - TransparentFX
@@ -17,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - conveyor
+  - conveyorEnd
+  - conveyorCorner
+  - swarmAI
+  - rangedAI
   - 
   - 
   - 

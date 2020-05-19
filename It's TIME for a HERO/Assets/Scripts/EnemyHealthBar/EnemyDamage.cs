@@ -29,12 +29,13 @@ public class EnemyDamage : MonoBehaviour
     {
         EnemycurrentHealth = EnemyMaxHealth;
         Enemyhealthbar.SetMaxHealth(EnemyMaxHealth);
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        //NOTE
+        //This needs updating, currently clicking one enemy will reduce health of all enemies.
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

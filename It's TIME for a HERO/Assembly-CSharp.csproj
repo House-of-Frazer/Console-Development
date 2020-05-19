@@ -52,9 +52,6 @@
     <UnityVersion>2019.1.10f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.10f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -63,6 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Ai\AI.cs" />
+    <Compile Include="Assets\Scripts\Ai\IdleState.cs" />
+    <Compile Include="Assets\Scripts\Ai\MoveState.cs" />
+    <Compile Include="Assets\Scripts\Ai\rangedAttack.cs" />
+    <Compile Include="Assets\Scripts\Ai\RangedState.cs" />
+    <Compile Include="Assets\Scripts\Ai\RunBackState.cs" />
+    <Compile Include="Assets\Scripts\Ai\RunToState.cs" />
+    <Compile Include="Assets\Scripts\Ai\StateMachine.cs" />
     <Compile Include="Assets\Scripts\AiSwarm.cs" />
     <Compile Include="Assets\Scripts\camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\cameraFade.cs" />
@@ -70,6 +75,7 @@
     <Compile Include="Assets\Scripts\EnemyHealthBar\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\HealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\PlayerMovementN.cs" />
+    <Compile Include="Assets\Scripts\Factory\Cog.cs" />
     <Compile Include="Assets\Scripts\Factory\conveyor.cs" />
     <Compile Include="Assets\Scripts\Factory\Doors.cs" />
     <Compile Include="Assets\Scripts\Factory\keyCards.cs" />
@@ -92,22 +98,22 @@
     <None Include="Assets\Shaders\EnemyShader.shader" />
     <None Include="Assets\Shaders\WaterOpaque.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -293,13 +299,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.10f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Rhys/Desktop/ConsoleGamesProgramming/Console-Development/It's TIME for a HERO/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/ninty/Documents/GitHub/Console-Development/It's TIME for a HERO/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.10f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
