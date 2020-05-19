@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - Enemy
+  - redDoor
+  - redCard
+  - Ball
+  - Quest
   layers:
   - Default
   - TransparentFX
