@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1891905050}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: endpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 4005563858910871328}
   - component: {fileID: 95671165}
   - component: {fileID: 95671166}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: conveyorEnd
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

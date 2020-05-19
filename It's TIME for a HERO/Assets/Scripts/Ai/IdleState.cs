@@ -113,11 +113,20 @@ public class IdleState : State<AI>
                 _owner.gameObject.transform.Translate(Vector3.forward * (movementSpeed / 2) * Time.deltaTime);
             }
         //Otherwise, idle
-
-        if (_owner.distanceFromPlayer < 10)
+        
+        //if AI is swarm AI
+        if (_owner.gameObject.layer == 11)
         {
-            //Call runToState
-            _owner.stateMachine.ChangeState(RunToState.Instance); //switch to Move state
+            if (_owner.distanceFromPlayer < 10)
+               //Call runToState
+                _owner.stateMachine.ChangeState(RunToState.Instance); //switch to Run to state state
         }
+        //if AI is ranged AI
+        if (_owner.gameObject.layer == 12)
+        {
+            if (_owner.distanceFromPlayer < 20)
+                _owner.stateMachine.ChangeState(RangedState.Instance); //switch to Ranged state
+        }
+
     }
 }

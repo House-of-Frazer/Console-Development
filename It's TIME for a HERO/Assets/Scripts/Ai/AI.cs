@@ -15,7 +15,9 @@ public class AI : MonoBehaviour {
     public float distanceFromPlayer; //The current distance of the player from the AI Cheese Gobbler
     public float distanceFromStartingLocation; //The current distance from its starting location
 
-    EnemyDamage damageControl; //Reference to Enemy Damage Script
+    EnemyDamage damageControl; //Reference to Enemy Damage Scrip
+
+    public GameObject rangedAttack;
 
     private void Start()
     {
