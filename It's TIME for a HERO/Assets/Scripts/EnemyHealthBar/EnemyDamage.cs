@@ -7,16 +7,21 @@ public class EnemyDamage : MonoBehaviour
 
     public int EnemyMaxHealth = 100;
     public int EnemycurrentHealth;
+    float _timer = 0;
 
     public HealthBar Enemyhealthbar;
+    Renderer rend;
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("Player"))
+        if (col.collider.CompareTag("Player") || (col.collider.CompareTag("Bullet")))
         {
-            EnemyTakeDamage(10);
+            EnemyTakeDamage(20);
+            Destroy(col.gameObject);
         }
     }
+
+
 
     void EnemyTakeDamage(int damage)
     {
@@ -27,29 +32,29 @@ public class EnemyDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        rend = GetComponent<Renderer>();
+
         EnemycurrentHealth = EnemyMaxHealth;
         Enemyhealthbar.SetMaxHealth(EnemyMaxHealth);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //NOTE
-        //This needs updating, currently clicking one enemy will reduce health of all enemies.
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+        if (EnemycurrentHealth <= 0)
+        {   
+            //Disslove the enemy away by affecting the shader applied to the enemy
+            _timer += Time.deltaTime/2  ;
+            Debug.Log(_timer);
+            float dissolveAmount = _timer;
+            //Set value to renderer to control dissolve amount
+            rend.material.SetFloat("_Amount", dissolveAmount);
+            if (_timer > 1)
             {
-                if (hit.transform.tag == ("Enemy"))
-                {
-                    EnemyTakeDamage(10);
-                }
+                //Once the enemy has dissolved, destroy the gameobject
+                Destroy(this.gameObject);
             }
         }
-
-
     }
+
 }
