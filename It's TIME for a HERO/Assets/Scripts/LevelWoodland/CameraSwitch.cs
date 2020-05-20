@@ -9,6 +9,7 @@ public class CameraSwitch : MonoBehaviour
 
     public static bool mainCamActive;
     //main camera is the player camera
+    public bool past = false;
 
     void Start()
     {
@@ -19,27 +20,44 @@ public class CameraSwitch : MonoBehaviour
 
    void Update()
     {
-        if (Input.GetButton("FBOne"))
+        if(Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+        {if (past == false)
+            {
+                past = true;
+            }
+        if(past == true)
+            {
+               past = false;
+            }
+        }
+        //FBOne?
+        if (past == true)
         {
-            //if (mainCamActive == true)
-            //{
+            if (Input.GetKey(KeyCode.Y))
+            {
                 mainCamera.SetActive(false);
                 topDownCamera.SetActive(true);
                 mainCamActive = false;
-            //}
-            /*if (mainCamActive == false)
+            }
+            if (Input.GetKey(KeyCode.Joystick1Button2))
+            {
+                mainCamera.SetActive(false);
+                topDownCamera.SetActive(true);
+                mainCamActive = false;
+            }
+            //FBTwo
+            if (Input.GetKey(KeyCode.Joystick1Button1))
             {
                 mainCamera.SetActive(true);
                 topDownCamera.SetActive(false);
                 mainCamActive = true;
-            }*/
-       
-        }
-        if (Input.GetButton("FBTwo"))
-        {
-            mainCamera.SetActive(true);
-            topDownCamera.SetActive(false);
-            mainCamActive = true;
+            }
+            if (Input.GetKey(KeyCode.R))
+            {
+                mainCamera.SetActive(true);
+                topDownCamera.SetActive(false);
+                mainCamActive = true;
+            }
         }
     }
 }
