@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\AiSwarm.cs" />
     <Compile Include="Assets\Scripts\camera\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\cameraFade.cs" />
+    <Compile Include="Assets\Scripts\debugInfoScript.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\Billboard.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar\HealthBar.cs" />
