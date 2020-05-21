@@ -3678,6 +3678,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -8128857490303524270, guid: af300775725fef3429187af57ac0e6f7, type: 3}
+--- !u!4 &492155589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3678216833030653281, guid: d955337fc10308f4db75ff2198cfbe0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2104688594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &493220284
 GameObject:
   m_ObjectHideFlags: 0
@@ -6830,6 +6836,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223771144618551188, guid: 3efa53b09e884f342a193bf2f2221295,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efa53b09e884f342a193bf2f2221295, type: 3}
 --- !u!1001 &936879622
@@ -10606,6 +10617,11 @@ PrefabInstance:
       propertyPath: movement
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3003322340046994450, guid: 6e683eb47e6c5374bb52caa09fce32db,
+        type: 3}
+      propertyPath: healthUi
+      value: 
+      objectReference: {fileID: 522345849}
     - target: {fileID: 3003322340046994448, guid: 6e683eb47e6c5374bb52caa09fce32db,
         type: 3}
       propertyPath: cameraFadeImage
@@ -11162,6 +11178,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223771144618551188, guid: 3efa53b09e884f342a193bf2f2221295,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efa53b09e884f342a193bf2f2221295, type: 3}
 --- !u!1001 &1413126777
@@ -12252,6 +12273,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1028672818871112037, guid: 3d568ad7fce2547488ff5438f05c536f,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d568ad7fce2547488ff5438f05c536f, type: 3}
 --- !u!1001 &1539518097
@@ -12769,6 +12795,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1028672818871112037, guid: 3d568ad7fce2547488ff5438f05c536f,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d568ad7fce2547488ff5438f05c536f, type: 3}
 --- !u!1001 &1571227300
@@ -13108,6 +13139,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223771144618551188, guid: 3efa53b09e884f342a193bf2f2221295,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efa53b09e884f342a193bf2f2221295, type: 3}
 --- !u!1 &1601626759 stripped
@@ -13881,6 +13917,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223771144618551188, guid: 3efa53b09e884f342a193bf2f2221295,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efa53b09e884f342a193bf2f2221295, type: 3}
 --- !u!1001 &1701590970
@@ -14516,6 +14557,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223771144618551188, guid: 3efa53b09e884f342a193bf2f2221295,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efa53b09e884f342a193bf2f2221295, type: 3}
 --- !u!4 &1762101442 stripped
@@ -15273,6 +15319,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1028672818871112037, guid: 3d568ad7fce2547488ff5438f05c536f,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d568ad7fce2547488ff5438f05c536f, type: 3}
 --- !u!1 &1833608872 stripped
@@ -15783,6 +15834,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7223771144618551188, guid: 3efa53b09e884f342a193bf2f2221295,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efa53b09e884f342a193bf2f2221295, type: 3}
 --- !u!1 &1883512542 stripped
@@ -17218,6 +17274,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1028672818871112037, guid: 3d568ad7fce2547488ff5438f05c536f,
+        type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 492155589}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d568ad7fce2547488ff5438f05c536f, type: 3}
 --- !u!4 &2054834260 stripped

@@ -14,6 +14,7 @@ public class MakeOBJ : MonoBehaviour
     public GameObject prefab2;
     public GameObject mark;
     public float movement = 0.8f;
+    public GameObject futureThing;
 
     // Use this for initialization
     void Start()
@@ -45,9 +46,10 @@ public class MakeOBJ : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             
-            GameObject obj = Instantiate(prefab, new Vector3(mark.transform.position.x,mark.transform.position.y - 1066, mark.transform.position.z), Quaternion.identity) as GameObject;
+            GameObject obj = Instantiate(prefab, new Vector3(mark.transform.position.x,mark.transform.position.y - 1096, mark.transform.position.z), Quaternion.identity) as GameObject;
             GameObject obj2 = Instantiate(prefab2, new Vector3(mark.transform.position.x, mark.transform.position.y + 1, mark.transform.position.z), Quaternion.identity) as GameObject;
             obj.transform.localScale = new Vector3(40, 40, 40);
+            obj.transform.parent = futureThing.transform;
 
         }
 
@@ -62,6 +64,7 @@ public class MakeOBJ : MonoBehaviour
                     GameObject obj = Instantiate(prefab, new Vector3(hit.point.x, hit.point.y - 1066, hit.point.z), Quaternion.identity) as GameObject;
                     GameObject obj2 = Instantiate(prefab2, new Vector3(hit.point.x, hit.point.y + 1, hit.point.z), Quaternion.identity) as GameObject;
                     obj.transform.localScale = new Vector3(40, 40, 40);
+                    obj.transform.parent = futureThing.transform;
                 }
 
             }

@@ -23,6 +23,8 @@ public class PlayerMovementN : MonoBehaviour
 
     float axisHorizontal, axisVertical;
 
+    public HealthUI healthUi;
+
 
     // Start is called before the first frame update
     void Start()
@@ -47,11 +49,13 @@ public class PlayerMovementN : MonoBehaviour
                 StartCoroutine(DestroyBullet(bullet, lifetime));
                 shooting = false;
             }
+        } 
+    }
 
-        }
-
-        
-
+    public void takeDamaage()
+    {
+        healthUi.CurrentNumberofHearts -= 1;
+        healthUi.ClearScreen();
     }
 
     public void Forward() //Controls for movement using W when the player presses and holds the key
@@ -101,6 +105,10 @@ public class PlayerMovementN : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             PlayerGrounded = true;
+        }
+        if (collision.gameObject.tag == "EnemyBullet")
+        {
+            takeDamaage();
         }
     }
 

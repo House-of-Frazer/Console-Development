@@ -10,6 +10,10 @@ TagManager:
   - redCard
   - blueDoor
   - blueCard
+  - Bullet
+  - Quest
+  - Ball
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ public class rangedAttack : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player"); //Find the player and set it to player
+
     }
 
     // Update is called once per frame
@@ -38,8 +39,9 @@ public class rangedAttack : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Player"))
-            {
-                Destroy(gameObject);
-            }
+        {
+            Debug.Log("hit!");
+            Destroy(gameObject);
+        }
     }
 }
