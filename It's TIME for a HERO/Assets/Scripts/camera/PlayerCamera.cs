@@ -31,7 +31,7 @@ public class PlayerCamera : MonoBehaviour
             if (RotatePlayer)
             {
                 Quaternion camTurnAngle =
-                        Quaternion.AngleAxis(Input.GetAxis("Horizontal") * RotationSpeed, Vector3.up);
+                        Quaternion.AngleAxis(Input.GetAxis("HorizontalStick") * RotationSpeed, Vector3.up);
 
                 cameraOffset = camTurnAngle * cameraOffset;
             }

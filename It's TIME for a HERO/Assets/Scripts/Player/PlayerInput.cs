@@ -55,7 +55,7 @@ public class PlayerInput : MonoBehaviour
                 movement.Left();
             }
 
-            if (Input.GetAxisRaw("Vertical") == 1)
+            if (Input.GetAxisRaw("Horizontal") == 1)
             {
                 movement.Right();
             }
