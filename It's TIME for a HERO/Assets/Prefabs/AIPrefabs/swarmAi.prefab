@@ -114,6 +114,7 @@ MonoBehaviour:
   EnemyMaxHealth: 100
   EnemycurrentHealth: 0
   Enemyhealthbar: {fileID: 1061477114838626786}
+  healthUi: {fileID: 0}
 --- !u!114 &614531057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +130,7 @@ MonoBehaviour:
   EnemyMaxHealth: 100
   EnemycurrentHealth: 0
   Enemyhealthbar: {fileID: 1061477114838626786}
+  healthUi: {fileID: 0}
 --- !u!65 &589802495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -158,6 +160,7 @@ MonoBehaviour:
   startingPos: {x: 0, y: 0, z: 0}
   distanceFromPlayer: 0
   distanceFromStartingLocation: 0
+  rangedAttack: {fileID: 0}
 --- !u!1001 &1507479770479790784
 PrefabInstance:
   m_ObjectHideFlags: 0

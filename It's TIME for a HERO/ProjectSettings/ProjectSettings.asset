@@ -526,11 +526,12 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: It's TIME for a HERO
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\ninty\Documents\GitHub\Console-Development\It's TIME
+    for a HERO\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 0003bfd3064ed701
   metroApplicationDescription: It's TIME for a HERO
   wsaImages: {}
   metroTileShortName: 

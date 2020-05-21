@@ -25,7 +25,7 @@ public class CameraSwitch : MonoBehaviour
             {
                 past = true;
             }
-        if(past == true)
+        else if(past == true)
             {
                past = false;
             }

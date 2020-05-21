@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthUI : MonoBehaviour
 {
@@ -65,6 +66,14 @@ public class HealthUI : MonoBehaviour
             ClearScreen(); //Run clear screen function.
             PreviousNumberofHearts = CurrentNumberofHearts; //Previous max hearts is equal to current max hearts.
             AddHearts(CurrentNumberofHearts); //Current max hearts is equal to hearts on screen.
+        }
+
+        if (CurrentNumberofHearts < 1)
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            string _currentSceneName = currentScene.name;
+            SceneManager.LoadScene(_currentSceneName);
+
         }
     }
 }

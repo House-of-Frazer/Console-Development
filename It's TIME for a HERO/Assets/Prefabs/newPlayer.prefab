@@ -10043,9 +10043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb28dd4d2850dfc4fbef2d115f761d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RB: {fileID: 0}
+  RB: {fileID: 3003322340046994449}
   PlayerGrounded: 0
-  movement: 0.1
+  movement: 0.3
   bulletspawner: {fileID: 0}
   bulletprefab: {fileID: 6763881926901854066, guid: c05cd302765b71743abcd229af6fb7cd,
     type: 3}
@@ -10071,7 +10071,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6524621673721644464}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 832cf8c63d9c6264586cbb5147ea6a10, type: 3}
   m_Name: 
@@ -10087,7 +10087,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6524621673721644464}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea1ea25437c83554ea9e5f253005dbf7, type: 3}
   m_Name: 
@@ -10131,7 +10131,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.08
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -10140,7 +10140,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 508.333
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

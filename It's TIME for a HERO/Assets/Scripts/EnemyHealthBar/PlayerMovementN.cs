@@ -28,12 +28,15 @@ public class PlayerMovementN : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody>(); //Setup reference for the PlayerMovement script;
+
+        axisHorizontal = Input.GetAxis("Horizontal");
+        axisVertical = Input.GetAxis("Vertical");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) || Input.GetButton("FBTwo"))
         {
             if (shooting)
             {
@@ -47,24 +50,30 @@ public class PlayerMovementN : MonoBehaviour
 
         }
 
+        
+
     }
 
     public void Forward() //Controls for movement using W when the player presses and holds the key
     {
         transform.Translate(Vector3.forward * movement, pivot.transform);
+        transform.Translate(Vector3.forward * axisVertical, pivot.transform);
     }
 
     public void Left() //Controls for movement using A when the player presses and holds the key
     {
         transform.Translate(Vector3.left * movement, pivot.transform);
+        transform.Translate(Vector3.left * axisHorizontal, pivot.transform);
     }
     public void Right() //Controls for movement using S when the player presses and holds the key
     {
         transform.Translate(Vector3.right * movement, pivot.transform);
+        transform.Translate(Vector3.right * axisHorizontal, pivot.transform);
     }
     public void Backward() //Controls for movement using D when the player presses and holds the key
     {
         transform.Translate(-Vector3.forward * movement, pivot.transform);
+        transform.Translate(-Vector3.forward * axisVertical, pivot.transform);
     }
 
     public void RotateLeft()  //Controls for movement of the players rotation using Q

@@ -12,16 +12,23 @@ public class EnemyDamage : MonoBehaviour
     public HealthBar Enemyhealthbar;
     Renderer rend;
 
+    public HealthUI healthUi;
+
     public void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("Player") || (col.collider.CompareTag("Bullet")))
+        if (col.collider.CompareTag("Player"))
         {
             EnemyTakeDamage(20);
-            Destroy(col.gameObject);
+            healthUi.CurrentNumberofHearts -= 1;
+            healthUi.ClearScreen();
         }
+        if (col.collider.CompareTag("Bullet"))
+        { 
+           EnemyTakeDamage(20);
+           Destroy(col.gameObject);
+        }
+
     }
-
-
 
     void EnemyTakeDamage(int damage)
     {

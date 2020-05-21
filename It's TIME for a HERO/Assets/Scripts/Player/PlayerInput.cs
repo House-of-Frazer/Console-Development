@@ -6,22 +6,25 @@ public class PlayerInput : MonoBehaviour
 {
     PlayerMovementN movement; //Reference for the PlayerMovement script;
     TimeTravel travel; // Referecnce to the TimeTrvael script;
+    bool showDebug;
+    public GameObject DebugInfo;
 
     private void Awake()
     {
         movement = GetComponent<PlayerMovementN>(); //Setup reference for the PlayerMovement script;
         travel = GetComponent<TimeTravel>(); //Setup reference for the PlayerMovement script;
+        DebugInfo.SetActive(false);
     }
     void BasicMovement() //Controls the inputs for the player's basic movment
     {
         //player can only act if they are not time travelling
         if (TimeTravel.timeTravel == false)
-        {
+        { 
             if (Input.GetKey(KeyCode.W))
             {
                 movement.Forward();
             }
-
+            
             if (Input.GetKey(KeyCode.A))
             {
                 movement.Left();
@@ -33,6 +36,24 @@ public class PlayerInput : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.D))
+            {
+                movement.Right();
+            }
+            if (Input.GetAxisRaw("Vertical") == -1)
+            {
+                movement.Forward();
+            }
+
+            if (Input.GetAxisRaw("Vertical") == 1)
+            {
+                movement.Backward();
+            }
+            if (Input.GetAxisRaw("Horizontal") == -1)
+            {
+                movement.Left();
+            }
+
+            if (Input.GetAxisRaw("Vertical") == 1)
             {
                 movement.Right();
             }
@@ -71,6 +92,23 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
+
+    void showDebugInfo()
+    {
+        if (Input.GetButtonDown("Debug"))
+        {
+            if (showDebug == false)
+            {
+                showDebug = true;
+                DebugInfo.SetActive(true); ;
+            }
+            else
+            {
+                showDebug = false;
+                DebugInfo.SetActive(false);
+            }
+        }
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -84,5 +122,7 @@ public class PlayerInput : MonoBehaviour
         BasicMovement();
         ExtraMovement();
         TimeTravelling();
+        showDebugInfo();
     }
 }
+
