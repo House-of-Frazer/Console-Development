@@ -19,12 +19,17 @@ public class AI : MonoBehaviour {
 
     public GameObject rangedAttack;
 
+    Renderer rend;
+    float _timer = 0;
+
+
     private void Start()
     {
         stateMachine = new StateMachine<AI>(this); //set stateMachine object
         stateMachine.ChangeState(IdleState.Instance); //set initial state to idle
 
         player = GameObject.FindGameObjectWithTag("Player"); //Find the player and set it to player
+        rend = GetComponent<Renderer>();
 
         startingPos = this.transform.position; //Set the starting position to be the current position of the AI
 
@@ -46,7 +51,17 @@ public class AI : MonoBehaviour {
         //if Player attacks and instance is latched onto player, destroy instance
         if (damageControl.EnemycurrentHealth <= 0)
         {
-            Destroy(gameObject);
+            //Disslove the enemy away by affecting the shader applied to the enemy
+            _timer += Time.deltaTime / 2;
+            Debug.Log(_timer);
+            float dissolveAmount = _timer;
+            //Set value to renderer to control dissolve amount
+            rend.material.SetFloat("_Amount", dissolveAmount);
+            if (_timer > 1)
+            {
+                //Once the enemy has dissolved, destroy the gameobject
+                Destroy(this.gameObject);
+            }
         }
 
         //call the update function of the state

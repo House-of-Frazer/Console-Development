@@ -20,6 +20,7 @@ public class PlayerInput : MonoBehaviour
         //player can only act if they are not time travelling
         if (TimeTravel.timeTravel == false)
         { 
+            /*
             if (Input.GetKey(KeyCode.W))
             {
                 movement.Forward();
@@ -39,6 +40,7 @@ public class PlayerInput : MonoBehaviour
             {
                 movement.Right();
             }
+            */
             if (Input.GetAxisRaw("Vertical") == -1)
             {
                 movement.Forward();

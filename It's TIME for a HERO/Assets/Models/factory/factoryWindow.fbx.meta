@@ -3,7 +3,32 @@ guid: 87a0a0ffa929bcf4ab54bdec7268de90
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: decoration
+    second: {fileID: 2100000, guid: 8a6f2b3904439f24499904af8e592d5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame
+    second: {fileID: 2100000, guid: de08b4eed0c7d9c43a180b152ef9f66f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frameInner
+    second: {fileID: 2100000, guid: 6b1e8e9a202a6d0449c50a7f40a71090, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 0fd70530f456c7649bf0173ca77c45f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: panes
+    second: {fileID: 2100000, guid: 447568414d0740b48a77cd01e29883f2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

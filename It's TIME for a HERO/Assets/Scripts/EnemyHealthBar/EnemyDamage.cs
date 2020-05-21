@@ -10,7 +10,7 @@ public class EnemyDamage : MonoBehaviour
     float _timer = 0;
 
     public HealthBar Enemyhealthbar;
-    Renderer rend;
+    //Renderer rend;
 
     public HealthUI healthUi;
 
@@ -39,7 +39,7 @@ public class EnemyDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
 
         EnemycurrentHealth = EnemyMaxHealth;
         Enemyhealthbar.SetMaxHealth(EnemyMaxHealth);
@@ -48,6 +48,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (EnemycurrentHealth <= 0)
         {   
             //Disslove the enemy away by affecting the shader applied to the enemy
@@ -62,6 +63,7 @@ public class EnemyDamage : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+        */
     }
 
 }
